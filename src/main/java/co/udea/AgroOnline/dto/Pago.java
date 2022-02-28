@@ -1,7 +1,7 @@
 package co.udea.AgroOnline.dto;
 
 import java.util.Date;
-//**
+ 
 @Entity
 @Table(name = pago)
 public class Pago {
@@ -54,4 +54,5 @@ public class Pago {
     public void setTotal(double total) {
         this.total = total;
     }
+ 
 }
