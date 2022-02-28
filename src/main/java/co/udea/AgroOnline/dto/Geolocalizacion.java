@@ -1,6 +1,5 @@
 package co.udea.AgroOnline.dto;
 
-
 @Entity
 @Table(name = geolocalizacion)
 public class Geolocalizacion extends GoogleMap {
