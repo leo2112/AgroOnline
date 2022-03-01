@@ -1,4 +1,4 @@
-package co.udea.AgroOnline.dto;
+package co.udea.AgroOnline.modelo;
 
 @Entity
 @Table(name = geolocalizacion)
