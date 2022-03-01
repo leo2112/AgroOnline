@@ -17,7 +17,7 @@ spring:
 
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jjdbc:postgresql://xxx.xxx.xxx.xxx:5432/base_de_datos:5432/d7b4seh1ir3dqq?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&sslmode=require
+    url: jdbc:postgresql://ec2-34-230-110-100.compute-1.amazonaws.com:5432/d94m5td3mj4kfk?user=jgdietsilpesrz&password=10d2200537c7c13d60e42add6a39ea47a6ee2abb1e0dd556d673f5c01e0cebad
     driver-class-name: org.postgresql.Driver
     username:
     password:
