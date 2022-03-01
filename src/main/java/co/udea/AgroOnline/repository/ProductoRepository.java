@@ -1,4 +1,4 @@
 package co.udea.AgroOnline.repository;
 
-public class uiu {
+public interface ProductoRepository {
 }
