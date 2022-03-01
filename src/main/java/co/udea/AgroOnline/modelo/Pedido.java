@@ -1,69 +1,70 @@
 package co.udea.AgroOnline.modelo;
 
+import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
-@Table(name = pedido)
+@Table(name = "pedido")
 public class Pedido {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "idPedido")
-    private Long idPedido;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pedido")
+    private Long id_pedido;
 
-    @Colum(name = "fechaPedido")
-    private Date fechaPedido;
+    @Column(name = "fecha_pedido")
+    private Date fecha_pedido;
 
-    @Colum(name = "fechaEntrega")
-    private Date fechaentrega;
+    @Column(name = "fecha_entrega")
+    private Date fecha_entrega;
 
-    @Colum(name = "totalPedido")
-    private double totalpedido;
+    @Column(name = "total_pedido")
+    private double total_pedido;
 
-    @Colum(name = "estadoPedido")
-    private String estadopedido;
+    @Column(name = "estado_pedido")
+    private String estado_pedido;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_estadoPedido", insertable = false, updatable = false)
+    @JoinColumn(name = "fk_estado_pedido", insertable = false, updatable = false)
 
-    public Long getIdPedido() {
-        return idPedido;
+    public Long getId_pedido() {
+        return id_pedido;
     }
 
-    public void setIdPedido(Long idPedido) {
-        this.idPedido = idPedido;
+    public void setId_pedido(Long id_pedido) {
+        this.id_pedido = id_pedido;
     }
 
-    public Date getFechaPedido() {
-        return fechaPedido;
+    public Date getFecha_pedido() {
+        return fecha_pedido;
     }
 
-    public void setFechaPedido(Date fechaPedido) {
-        this.fechaPedido = fechaPedido;
+    public void setFecha_pedido(Date fecha_pedido) {
+        this.fecha_pedido = fecha_pedido;
     }
 
-    public Date getFechaentrega() {
-        return fechaentrega;
+    public Date getFecha_entrega() {
+        return fecha_entrega;
     }
 
-    public void setFechaentrega(Date fechaentrega) {
-        this.fechaentrega = fechaentrega;
+    public void setFecha_entrega(Date fecha_entrega) {
+        this.fecha_entrega = fecha_entrega;
     }
 
-    public double getTotalpedido() {
-        return totalpedido;
+    public double getTotal_pedido() {
+        return total_pedido;
     }
 
-    public void setTotalpedido(double totalpedido) {
-        this.totalpedido = totalpedido;
+    public void setTotal_pedido(double total_pedido) {
+        this.total_pedido = total_pedido;
     }
 
-    public String getEstadopedido() {
-        return estadopedido;
+    public String getEstado_pedido() {
+        return estado_pedido;
     }
 
-    public void setEstadopedido(String estadopedido) {
-        this.estadopedido = estadopedido;
+    public void setEstado_pedido(String estado_pedido) {
+        this.estado_pedido = estado_pedido;
     }
 }

@@ -1,17 +1,19 @@
 package co.udea.AgroOnline.modelo;
 
+import javax.persistence.*;
+
 @Entity
-@Table(name = geolocalizacion)
+@Table(name = "geolocalizacion")
 public class Geolocalizacion extends GoogleMap {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "departamento")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "departamento")
     public String departamento;
-    @Colum(name = "ciudad")
+    @Column(name = "ciudad")
     public String ciudad;
-    @Colum(name = "barrioVereda")
-    public String barrioVereda;
+    @Column(name = "barrio_vereda")
+    public String barrio_vereda;
 
     public String getDepartamento() {
         return departamento;
@@ -29,11 +31,11 @@ public class Geolocalizacion extends GoogleMap {
         this.ciudad = ciudad;
     }
 
-    public String getBarrioVereda() {
-        return barrioVereda;
+    public String getBarrio_vereda() {
+        return barrio_vereda;
     }
 
-    public void setBarrioVereda(String barrioVereda) {
-        this.barrioVereda = barrioVereda;
+    public void setBarrio_vereda(String barrioVereda) {
+        this.barrio_vereda = barrioVereda;
     }
 }

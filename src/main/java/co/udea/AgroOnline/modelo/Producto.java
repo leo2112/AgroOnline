@@ -1,58 +1,51 @@
 package co.udea.AgroOnline.modelo;
 
 
+import javax.persistence.*;
+
 @Entity
-@Table(name = productor)
+@Table(name = "productor")
 public class Producto {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "idProducto")
-    public Integer idProducto;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
+    public Integer id_producto;
 
 
-    @Colum(name = "nomProducto")
-    public String nomProducto;
+    @Column(name = "nom_producto")
+    public String nom_producto;
 
-    @Colum(name = "precio")
+    @Column(name = "precio")
     public double precio;
 
-    @Colum(name = "tipo")
+    @Column(name = "tipo")
     public String tipo;
 
-    @Colum(name = "stock")
+    @Column(name = "stock")
     public double stock;
 
-    @Colum(name = "imagen")
+    @Column(name = "imagen")
     public String imagen;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_tipo", insertable = false, updatable = false)
 
 
-    public Integer getIdProducto() {
-        return idProducto;
+    public Integer getId_producto() {
+        return id_producto;
     }
 
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
+    public void setId_producto(Integer id_producto) {
+        this.id_producto = id_producto;
     }
 
-    public double getStock() {
-        return stock;
+    public String getNom_producto() {
+        return nom_producto;
     }
 
-    public void setStock(double stock) {
-        this.stock = stock;
-    }
-
-
-    public String getNomProducto() {
-        return nomProducto;
-    }
-
-    public void setNomProducto(String nomProducto) {
-        this.nomProducto = nomProducto;
+    public void setNom_producto(String nom_producto) {
+        this.nom_producto = nom_producto;
     }
 
     public double getPrecio() {
@@ -69,6 +62,14 @@ public class Producto {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public double getStock() {
+        return stock;
+    }
+
+    public void setStock(double stock) {
+        this.stock = stock;
     }
 
     public String getImagen() {
