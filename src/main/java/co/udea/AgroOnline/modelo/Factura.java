@@ -30,7 +30,7 @@ public class Factura {
     private boolean total;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_estadoFactura", insertable = false, updatable = false)
+    @JoinColumn(name = "fk_estado_factura", insertable = false, updatable = false)
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_detalle", insertable = false, updatable = false)

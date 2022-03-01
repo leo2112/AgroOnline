@@ -1,30 +1,32 @@
 package co.udea.AgroOnline.modelo;
 
 
+import javax.persistence.*;
+
 @Entity
-@Table(name = detallePedido)
+@Table(name = "detalle_pedido")
 public class DetallePedido {
 
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "cantidad")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cantidad")
     private int cantidad;
 
-    @Colum(name = "subtotal")
+    @Column(name = "subtotal")
     private double subtotal;
 
-    @Colum(name = "estadoPedido")
-    private String estadopedido;
+    @Column(name = "estado_pedido")
+    private String estado_pedido;
 
-    @Colum(name = "nomProducto")
-    private String nomProducto;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_nomProducto", insertable = false, updatable = false)
+    @Column(name = "nom_producto")
+    private String nom_producto;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_estadoPedido", insertable = false, updatable = false)
+    @JoinColumn(name = "fk_nom_producto", insertable = false, updatable = false)
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_estado_pedido", insertable = false, updatable = false)
 
     public int getCantidad() {
         return cantidad;
@@ -42,19 +44,19 @@ public class DetallePedido {
         this.subtotal = subtotal;
     }
 
-    public String getEstadopedido() {
-        return estadopedido;
+    public String getEstado_pedido() {
+        return estado_pedido;
     }
 
     public void setEstadopedido(String estadopedido) {
-        this.estadopedido = estadopedido;
+        this.estado_pedido = estadopedido;
     }
 
-    public String getNomProducto() {
-        return nomProducto;
+    public String getNom_producto() {
+        return nom_producto;
     }
 
-    public void setNomProducto(String nomProducto) {
-        this.nomProducto = nomProducto;
+    public void setNom_producto(String nomProducto) {
+        this.nom_producto = nomProducto;
     }
 }

@@ -1,24 +1,26 @@
 package co.udea.AgroOnline.modelo;
 
 
+import javax.persistence.*;
+
 @Entity
-@Table(name = estadoPedido)
+@Table(name = "estadoPedido")
 public class EstadoPedido {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "estadoPedido")
-    public String estadoPedido;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "estado_pedido")
+    public String estado_pedido;
 
-    @Colum(name = "descripcion")
+    @Column(name = "descripcion")
     public String descripcion;
 
-    public String getEstadoPedido() {
-        return estadoPedido;
+    public String getEstado_pedido() {
+        return estado_pedido;
     }
 
-    public void setEstado(String estadoPedido) {
-        this.estadoPedido = estadoPedido;
+    public void setEstado_pedido(String estado_pedido) {
+        this.estado_pedido = estado_pedido;
     }
 
     public String getDescripcion() {

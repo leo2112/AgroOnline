@@ -1,21 +1,23 @@
 package co.udea.AgroOnline.modelo;
 
 
+import javax.persistence.*;
 
 @Entity
-@Table(name = administrador)
+@Table(name = "administrador")
 public class Administrador extends Persona {
 
-    @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "estadoAdmi")
-    private boolean estadoAdmi;
 
-    public boolean isEstadoAdmi() {
-        return estadoAdmi;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "estado_admi")
+    private boolean estado_admi;
+
+    public boolean isEstado_admi() {
+        return estado_admi;
     }
 
-    public void setEstadoAdmi(boolean estadoAdmi) {
-        this.estadoAdmi = estadoAdmi;
+    public void setEstado_admi(boolean estado_admi) {
+        this.estado_admi = estado_admi;
     }
 }
