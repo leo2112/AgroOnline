@@ -1,4 +1,4 @@
 package co.udea.AgroOnline.exception;
 
-public class jj {
+public class ss {
 }

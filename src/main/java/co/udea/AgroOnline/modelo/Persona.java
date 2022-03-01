@@ -1,26 +1,28 @@
-package co.udea.AgroOnline.dto;
+package co.udea.AgroOnline.modelo;
+
+import javax.persistence.*;
 
 @Entity
-@Table(name = persona)
+@Table(name = "persona")
 public class Persona {
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Colum(name = "nombre")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Colum(name = "apellido")
+    @Column(name = "apellido")
     private String apellido;
 
-    @Colum(name = "telefono")
+    @Column(name = "telefono")
     private String telefono;
 
-    @Colum(name = "direccion")
+    @Column(name = "direccion")
     private String direccion;
 
-    @Colum(name = "email")
+    @Column(name = "email")
     public String email;
 
     public String getTelefono() {

@@ -1,34 +1,35 @@
-package co.udea.AgroOnline.dto;
+package co.udea.AgroOnline.modelo;
 
+import javax.persistence.*;
 import java.util.Date;
  
 @Entity
-@Table(name = pago)
+@Table(name = "pago")
 public class Pago {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "idfactura")
-    private Long idfactura;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_factura")
+    private Long id_factura;
 
-    @Colum(name = "fecha")
+    @Column(name = "fecha")
     private Date fecha;
 
-    @Colum(name = "descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Colum(name = "total")
+    @Column(name = "total")
     private double total;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_idfactura", insertable = false, updatable = false)
+    @JoinColumn(name = "fk_id_factura", insertable = false, updatable = false)
 
-    public Long getIdfactura() {
-        return idfactura;
+    public Long getId_factura() {
+        return id_factura;
     }
 
-    public void setIdfactura(Long idfactura) {
-        this.idfactura = idfactura;
+    public void setId_factura(Long idfactura) {
+        this.id_factura = idfactura;
     }
 
     public Date getFecha() {

@@ -1,26 +1,30 @@
-package co.udea.AgroOnline.dto;
+package co.udea.AgroOnline.modelo;
 
+
+import javax.persistence.*;
 
 @Entity
-@Table(name = tipoProducto)
+@Table(name = "tipo_producto")
 public class TipoProducto {
 
-    @Entity
-    @Table(name = idtipo)
-    public Long idtipo;
 
-    @Table(name = nombre)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_tipo")
+    public Long id_tipo;
+
+    @Column(name = "nombre")
     public String nombre;
 
-    @Table(name = descripcion)
+    @Column(name = "descripcion")
     public String descripcion;
 
-    public Long getIdtipo() {
-        return idtipo;
+    public Long getId_tipo() {
+        return id_tipo;
     }
 
-    public void setIdtipo(Long idtipo) {
-        this.idtipo = idtipo;
+    public void setId_tipo(Long idtipo) {
+        this.id_tipo = idtipo;
     }
 
     public String getNombre() {

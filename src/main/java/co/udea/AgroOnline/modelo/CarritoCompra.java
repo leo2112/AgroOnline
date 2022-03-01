@@ -1,21 +1,22 @@
-package co.udea.AgroOnline.dto;
+package co.udea.AgroOnline.modelo;
 
+import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
-@Table(name = carritoCompra)
+@Table(name = "Carrito_Compra")
 public class CarritoCompra {
 
     @Id
-    @GeneratedValue(strategy = Generationatype.IDENTITY)
-    @Colum(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Colum(name = "fecha")
+    @Column(name = "fecha")
     private Date fecha;
 
-    @Colum(name = "subtotal")
+    @Column(name = "subtotal")
     private double subtotal;
 
     public Long getId() {
