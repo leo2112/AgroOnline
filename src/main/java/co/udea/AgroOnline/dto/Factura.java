@@ -1,10 +1,14 @@
 package co.udea.AgroOnline.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 
 @Entity
-@Table(name = factura)
+@Table(name = "factura")
 public class Factura {
 
     @Id
