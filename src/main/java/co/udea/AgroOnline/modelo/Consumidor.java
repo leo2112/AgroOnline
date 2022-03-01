@@ -1,6 +1,4 @@
-package co.udea.AgroOnline.dto;
-
-import java.util.Date;
+package co.udea.AgroOnline.modelo;
 
 
 @Entity
